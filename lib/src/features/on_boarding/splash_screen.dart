@@ -1,19 +1,29 @@
 import 'package:dev_habits/src/config/app_assets.dart';
 import 'package:dev_habits/src/config/app_colors.dart';
 import 'package:dev_habits/src/config/app_strings.dart';
+import 'package:dev_habits/src/features/on_boarding/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 
-class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({Key? key}) : super(key: key);
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(
+      Duration(seconds: 3),
+      () => Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (_) => OnBoardingScreen(),
+        ),
+      ),
+    );
+
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                AppAssets.onBoardingBackground,
+                AppAssets.splashScreenBackground,
               ),
               fit: BoxFit.fill),
         ),
