@@ -8,4 +8,5 @@ class AppAssets {
   static const onBoardingImage2 = '$baseFolder/on_boarding_image_2.png';
   static const onBoardingImage3 = '$baseFolder/on_boarding_image_3.png';
   static const onBoardingImage4 = '$baseFolder/on_boarding_image_4.png';
+  static const menuIcon = '$baseFolder/menu.png';
 }
